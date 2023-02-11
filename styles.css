@@ -11,13 +11,10 @@
 
 .container {
   background-color: #fd8a8a;
-  width: auto;
-  height: 100vh;
 }
 
 .container {
   display: grid;
-  width: auto;
   height: 100vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -25,14 +22,14 @@
     "box1 box2 box3 box3"
     "box4 box5 box6 box7"
     "box4 box8 box6 box7";
-  grid-gap: 10px;
-  padding: 20px;
+  grid-gap: 1.5rem;
+  padding: 50px;
 }
 
 .box {
   width: auto;
-  border-radius: 10px;
-
+  border-radius: 25px;
+  overflow: hidden;
   transition: all 0.8s;
   cursor: pointer;
   position: relative;
@@ -40,7 +37,6 @@
   align-items: center;
   justify-content: center;
 }
-
 .box1 {
   background-color: #fefefe;
   grid-area: box1;
@@ -48,14 +44,14 @@
 
 .box1 p {
   font-family: "Courier New", Courier, monospace;
-  font-size: 10px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
   color: #698269;
 }
 
 .box1:hover {
-  transform: translateY(5px);
+  transform: translateY(10px);
   transition: all 0.5s ease;
   opacity: 0.6;
 }
@@ -67,90 +63,99 @@
 
 .box2 p {
   color: white;
-  font-size: 8px;
 }
+
 .box2:hover {
-  transform: translateY(5px);
+  transform: translateY(10px);
   transition: all 0.5s ease;
   opacity: 0.6;
 }
+
 .box3 {
   background-color: #9ea1d4;
   grid-area: box3;
 }
 
 .box3:hover {
-  transform: translateY(5px);
+  transform: translateY(10px);
   transition: all 0.5s ease;
   opacity: 0.6;
 }
+
 .box3 p {
   color: white;
-  font-size: 8px;
 }
 
 .box4 {
   background-color: #a8d1d1;
+
+  background-size: 500px;
+
   grid-area: box4;
 }
-.rocket {
+
+.box4 .rocket {
   align-items: center;
-  width: 80px;
+  height: auto;
+  width: 70%;
 }
+
 .box4:hover {
-  transform: translateY(5px);
+  transform: translateY(10px);
   transition: all 0.5s ease;
   opacity: 0.6;
 }
+
 .box5 {
   background-color: #a8d1d1;
   grid-area: box5;
 }
 
 .box5:hover {
-  transform: translateY(5px);
+  transform: translateY(10px);
   transition: all 0.5s ease;
   opacity: 0.6;
 }
 
 .box5 p {
   color: white;
-  font-size: 8px;
 }
-
 .box6 {
   background-color: #f1f7b5;
   grid-area: box6;
 }
-.heli {
-  align-items: center;
-  width: 90px;
-}
 
 .box6:hover {
-  transform: translateY(5px);
+  transform: translateY(10px);
   transition: all 0.5s ease;
   opacity: 0.6;
 }
 
 .box6 p {
   color: white;
-  font-size: 8px;
+}
+
+.box6 .heli {
+  align-items: center;
+  height: auto;
+  width: 80%;
 }
 
 .box7 {
   background-color: #a8d1d1;
   grid-area: box7;
 }
-.box7:hover {
-  transform: translateY(5px);
-  transition: all 0.5s ease;
-  opacity: 0.6;
+
+.box7 .blip {
+  align-items: center;
+  height: auto;
+  width: 70%;
 }
 
-.blip {
-  align-items: center;
-  width: 80px;
+.box7:hover {
+  transform: translateY(10px);
+  transition: all 0.5s ease;
+  opacity: 0.6;
 }
 
 .box8 {
@@ -159,68 +164,96 @@
 }
 
 .box8:hover {
-  transform: translateY(5px);
+  transform: translateY(10px);
   transition: all 0.5s ease;
   opacity: 0.6;
 }
 
 .box8 p {
   color: white;
-  font-size: 8px;
 }
 
 .about {
   background-color: #9ea1d4;
+}
+
+iframe {
+  position: absolute;
+  top: 750px;
+  right: -20px;
   width: 100%;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
+}
+
+.about {
+  width: 100%;
+  height: 100vh;
 }
 .about header .name {
   color: white;
-  font-size: 20px;
+  font-size: 70px;
   position: absolute;
-  left: 30px;
-  bottom: -88px;
+  left: 100px;
+  bottom: -200px;
 }
 
-.blob1 {
-  width: 50px;
+.about header .me {
+  font-size: 17px;
+  color: white;
+  position: absolute;
+  left: 100px;
+  bottom: -550px;
+}
+.about header .me .previous {
+  position: relative;
+  font-weight: 600;
+  font-size: 20px;
+  color: blueviolet;
+  z-index: 10000;
 }
 
 span {
   color: black;
 }
 
-.about header .me {
-  font-size: 6px;
+.about header .btn {
+  text-decoration: none;
+  transition: all 0.8s;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: #fd8a8a;
   color: white;
-  position: absolute;
-  left: 30px;
-  top: 358px;
+  font-size: 20px;
+  position: relative;
+  left: 100px;
+  top: 570px;
+  overflow: hidden;
+  z-index: 10000;
 }
-
-iframe {
-  position: absolute;
-  top: 266px;
-  right: -10px;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow-x: hidden;
-}
-
 .about::before {
   content: "";
   position: absolute;
-  bottom: -248px;
+  bottom: -713px;
   width: 100%;
-  height: 40px;
+  height: 100px;
   background: #9ea1d4;
   z-index: 1000;
 }
 
+.portfolio::before {
+  content: "";
+  position: absolute;
+  bottom: -733px;
+  width: 100%;
+  height: 20px;
+  background: #fd8a8a;
+  z-index: 1000;
+}
 .portfolio {
   width: 100%;
   height: 100vh;
@@ -228,142 +261,120 @@ iframe {
 
   background-color: #fd8a8a;
   height: 100vh;
-  overflow-x: hidden;
 }
 
 .portfolio .title {
   position: relative;
-  left: 30px;
-  top: 20px;
-  font-size: 7px;
+  left: 100px;
+  top: 80px;
 }
 
 .title2 {
-  font-size: 20px;
+  font-size: 50px;
   font-weight: 600;
 
   position: relative;
-  left: 30px;
-  top: 50px;
+  left: 100px;
+  top: 150px;
 }
 
 .description {
   position: relative;
-  left: 30px;
-  top: 65px;
-  font-size: 6px;
+  left: 100px;
+  top: 200px;
 }
 
 .apple {
+  text-decoration: none;
+  transition: all 0.8s;
   display: inline-block;
   padding: 10px 10px;
-  border-radius: 4px;
-  width: 60px;
-  height: 5px;
-  position: relative;
-  top: 90px;
-  left: 30px;
+  border-radius: 10px;
+  width: 188px;
   background-color: white;
-  overflow: hidden;
+  position: relative;
+  left: 100px;
+  top: 100px;
+  line-height: 20px;
 }
 
 .apple .ios {
-  font-size: 5px;
   position: relative;
-  left: 10px;
-  top: -7px;
+  left: 50px;
+  font-size: 15px;
 }
 .App {
-  font-size: 5px;
-  font-weight: 500;
   position: relative;
-  left: 10px;
-  top: -7px;
+  left: 50px;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .logo {
-  width: 15px;
-  position: relative;
-  left: -8px;
-  top: -25px;
+  width: 50px;
+  position: absolute;
+  left: 3px;
+  top: 4px;
 }
 
 .samsung {
+  text-decoration: none;
+  transition: all 0.8s;
   display: inline-block;
   padding: 10px 10px;
-  border-radius: 4px;
-  width: 60px;
-  height: 5px;
-  position: relative;
-  top: 90px;
-  left: 30px;
+  border-radius: 10px;
+  width: 188px;
   background-color: white;
-  overflow: hidden;
-}
-
-.samsung .android {
-  font-size: 5px;
   position: relative;
-  left: 10px;
-  top: -7px;
-}
-.App1 {
-  font-size: 5px;
-  font-weight: 500;
-  position: relative;
-  left: 10px;
-  top: -7px;
+  left: 120px;
+  top: 100px;
+  line-height: 20px;
 }
 
 .logo1 {
-  width: 15px;
+  width: 50px;
+  position: absolute;
+  left: 3px;
+  top: 4px;
+}
+
+.samsung .android {
   position: relative;
-  left: -8px;
-  top: -25px;
+  left: 50px;
+  font-size: 15px;
+}
+.App1 {
+  position: relative;
+  left: 50px;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .macbook {
   position: absolute;
-  top: 505px;
-  left: 180px;
-
-  overflow: hidden;
+  right: 100px;
+  top: 1630px;
 }
 
-.mac {
-  height: 100%;
-  width: 320px;
-  overflow-x: hidden;
-}
-
-.imgbg {
+.macbook .imgBx {
   position: absolute;
-  top: 56px;
-  left: 80px;
-  width: 160px;
-  height: 109px;
-  border-radius: 1px;
+  top: 20px;
+  left: 72px;
+  width: 465px;
+  height: 291px;
   background: url(images/page.png);
   background-position: top;
   background-size: 100%;
   transition: 13s;
 }
 
-.imgbg:hover {
+.macbook:hover .imgBx {
   background-position: bottom;
 }
 
 .blob {
+  width: 200px;
   position: relative;
-  top: -115px;
-  left: 395px;
-  width: 50px;
-}
-
-.hover {
-  font-size: 5px;
-  position: relative;
-  left: 410px;
-  bottom: 155px;
-  font-weight: 600;
+  top: -200px;
+  left: 860px;
 }
