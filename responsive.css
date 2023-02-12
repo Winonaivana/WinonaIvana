@@ -1,0 +1,34 @@
+@media (max-width: 1250px) {
+  .portfolio .macbook {
+    position: absolute;
+    right: 40px;
+    top: 1630px;
+    overflow: hidden;
+  }
+
+  .portfolio .mac {
+    width: 480px;
+  }
+
+  .macbook .imgBx {
+    position: absolute;
+    top: 10px;
+    left: 57px;
+    width: 366px;
+    height: 240px;
+    background: url(images/page.png);
+    background-position: top;
+    background-size: 100%;
+  }
+
+  .macbook:hover .imgBx {
+    background-position: bottom;
+  }
+
+  .blob {
+    width: 200px;
+    position: relative;
+    top: -200px;
+    left: 860px;
+  }
+}
